@@ -6,6 +6,13 @@ class Header extends Component {
     return (
       <div className="header">
         <p>this is the Header</p>
+        <h1> Clicky Game </h1>
+        <p>
+          Score: <span>number</span>
+        </p>
+        <p>
+          Top Score: <span>number</span>
+        </p>
       </div>
     );
   }
