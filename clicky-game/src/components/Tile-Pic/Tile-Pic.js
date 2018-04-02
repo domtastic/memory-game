@@ -4,13 +4,7 @@ import "./tile-pic.css";
 class TilePic extends Component {
   constructor(props) {
     super(props);
-    this.onClickPick = this.onClickPick.bind(this);
     this.state = { picks: 0 };
-  }
-  onClickPick() {
-    const clicked = this.state.picks + 1;
-    this.setState({ picks: clicked });
-    alert("Picks: " + this.state.picks);
   }
   render() {
     const { id, url } = this.props.tiles;
@@ -18,8 +12,9 @@ class TilePic extends Component {
       <div className="tile-card col-md-3" key={this.props.index} id={id}>
         <div className="card">
           <img
-            onClick={this.onClickPick}
+            onClick={this.props.onClickPick}
             className="card-img-top"
+            id={id}
             src={url}
             alt="Card image cap"
           />
